@@ -1,0 +1,76 @@
+.typewriter h2 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(255, 255, 255); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(254, 254, 254); }
+}
+
+body{
+  background-image: url('./R.gif');
+  background-size: 100%;
+
+
+    /* Set a specific height */
+    min-height: 1500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+/* Add this CSS to your existing styles */
+.body-content {
+  opacity: 0; /* Initially hide the Body content */
+  transition: opacity 0.5s ease-in-out; /* Define the transition effect */
+}
+
+.body-content{
+  opacity: 1; /* Show the Body content when 'show' class is added */
+}
+.slide-up {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide-up.show {
+  opacity: 1;
+}
+.slide-up.hide {
+  opacity: 0;
+}
+
+.move{
+
+animation: a 5s ease-in-out infinite;
+
+}
+@keyframes a {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
+  
+}
